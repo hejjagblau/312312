@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magitech Workshop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Age Gate -->
+    <div id="age-gate" style="position:fixed;inset:0;z-index:9999;background:#1a1a2e;display:flex;align-items:center;justify-content:center">
+        <div style="background:#16213e;border:1px solid #e94560;border-radius:8px;padding:2.5rem;max-width:420px;text-align:center;color:#eee;font-family:Georgia,serif">
+            <h1 style="color:#e94560;margin:0 0 1rem;font-size:1.5rem">Magitech Workshop</h1>
+            <p style="margin:0 0 0.5rem;font-size:1rem">This game contains adult content including nudity and sexual themes.</p>
+            <p style="margin:0 0 1.5rem;font-size:1rem"><strong>You must be 18 or older to play.</strong></p>
+            <button onclick="document.getElementById('age-gate').remove()" style="background:#e94560;color:#fff;border:none;border-radius:4px;padding:0.75rem 2rem;font-size:1rem;cursor:pointer">I am 18+ &mdash; Enter</button>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <!-- Left Sidebar: Player Avatar -->
+        <aside id="player-sidebar">
+            <div id="player-avatar">
+                <img id="player-image" src="" alt="Player">
+            </div>
+            <div id="player-info">
+                <div id="player-name">Player</div>
+                <div id="player-stats-mini">
+                    <span class="stat-badge aether-badge" title="Aether stored in the crystal cube">✧ <span id="stat-aether">2</span></span>
+                    <span class="stat-badge" title="Coin">Coin: <span id="stat-coin">50</span></span>
+                </div>
+            </div>
+            <button id="btn-player-details" class="sidebar-btn">View Stats</button>
+            <button id="btn-characters" class="sidebar-btn">Characters</button>
+            <div class="sidebar-divider"></div>
+
+            <button id="btn-save-load" class="sidebar-btn">Save / Load</button>
+            <button id="btn-restart" class="sidebar-btn btn-danger">Restart</button>
+            <div style="margin-top:auto;padding-top:1rem;text-align:center;font-size:0.75rem;color:#888;font-family:Georgia,serif">Created by FluxArtisan · v0.1.1</div>
+        </aside>
+
+        <!-- Mobile Sidebar Toggle -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open menu">&#9776;</button>
+        <div id="sidebar-overlay" class="sidebar-overlay hidden"></div>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Header -->
+            <header id="game-header">
+                <div id="time-display">
+                    <span id="day-display">Day 1</span>
+                    <span id="phase-display">Morning</span>
+                </div>
+                <div id="location-display">Workshop</div>
+            </header>
+
+            <!-- Scene Image -->
+            <section id="scene-area">
+                <img id="scene-image" src="" alt="Scene">
+
+            </section>
+
+            <!-- Dialogue/Text Area -->
+            <section id="dialogue-area">
+                <div id="speaker-name"></div>
+                <div id="dialogue-text">
+                    Welcome to your uncle's workshop. The place is dusty but full of curious devices and scattered notes.
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <section id="actions-area">
+                <div id="action-buttons">
+                    <!-- Buttons populated by JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Player Stats Modal -->
+    <div id="stats-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Player Stats</h2>
+            <div id="full-stats">
+                <div class="stat-row"><span>Chest:</span> <span id="stat-chest">Small</span></div>
+                <div class="stat-row"><span>Butt:</span> <span id="stat-butt">Small</span></div>
+                <div class="stat-row"><span>Muscle:</span> <span id="stat-muscle">Minimal</span></div>
+                <div class="stat-row"><span>Genitalia:</span> <span id="stat-genitalia">Vagina</span></div>
+                <div class="stat-row"><span>Genital Size:</span> <span id="stat-genitalia-size">Small</span></div>
+            </div>
+            <div id="prototype-effect-display" class="effect-display hidden">
+                <h3>Temporary Effect</h3>
+                <div id="current-effect-name"></div>
+                <div id="current-effect-desc"></div>
+            </div>
+            <h2 style="margin-top: 20px;">Content Discovered</h2>
+            <div id="content-stats">
+                <div class="stat-row"><span>Sex Scenes:</span> <span id="content-sex-scenes">0 / 10</span></div>
+                <div class="stat-row"><span>Sex Transformations:</span> <span id="content-sex-transforms">0 / 10</span></div>
+                <div class="stat-row"><span>Tower Scenes:</span> <span id="content-tower-scenes">0 / 14</span></div>
+                <div class="stat-row"><span>Mira Scenes:</span> <span id="content-mira-scenes">0 / 17</span></div>
+                <div class="stat-row"><span>Prototype Effects:</span> <span id="content-prototype-effects">0 / 18</span></div>
+                <div class="stat-row"><span>Misc Scenes:</span> <span id="content-misc-scenes">0 / 5</span></div>
+            </div>
+            <button id="btn-close-stats" class="modal-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Character Codex Modal -->
+    <div id="character-modal" class="modal hidden">
+        <div class="modal-content modal-wide">
+            <h2>Characters</h2>
+            <div class="character-codex-layout">
+                <div class="character-list">
+                    <button class="character-list-btn" data-npc="mira">Mira</button>
+                    <button class="character-list-btn" data-npc="aldric">Aldric</button>
+                    <button class="character-list-btn" data-npc="vessa">Vessa</button>
+                    <button class="character-list-btn" data-npc="mrs_thornwick">Mrs. Thornwick</button>
+                    <button class="character-list-btn" data-npc="fiona">Fiona</button>
+                    <button class="character-list-btn" data-npc="barret">Barret</button>
+                    <button class="character-list-btn" data-npc="lenna">Lenna</button>
+                    <button class="character-list-btn" data-npc="corwin">Corwin</button>
+                    <button class="character-list-btn" data-npc="della">Della</button>
+                    <button class="character-list-btn" data-npc="holt">Holt</button>
+                    <button class="character-list-btn" data-npc="sylvie">???</button>
+                </div>
+                <div class="character-detail">
+                    <div class="character-portrait">
+                        <img id="codex-portrait" src="" alt="Character">
+                        <div id="codex-history-nav" class="codex-history-nav hidden">
+                            <button id="codex-hist-first" title="Original">⏮</button>
+                            <button id="codex-hist-prev" title="Previous">◀</button>
+                            <span id="codex-hist-label">1 / 1</span>
+                            <button id="codex-hist-next" title="Next">▶</button>
+                            <button id="codex-hist-last" title="Current">⏭</button>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h3 id="codex-name">Select a character</h3>
+                        <div id="codex-role" class="codex-role"></div>
+                        <div id="codex-description" class="codex-description"></div>
+                        <div id="codex-stats" class="codex-stats"></div>
+                        <div id="codex-trust" class="codex-trust"></div>
+                        <div id="codex-desires" class="codex-desires"></div>
+                        <div id="codex-gallery-buttons" class="codex-gallery-buttons hidden">
+                            <button id="btn-codex-portraits" class="codex-gallery-btn">Portraits</button>
+                            <button id="btn-codex-scenes" class="codex-gallery-btn">Scenes</button>
+                        </div>
+                        <div id="codex-portrait-gallery" class="codex-portrait-gallery hidden">
+                            <button class="codex-gallery-back" id="btn-gallery-back-portraits">&larr; Back</button>
+                            <div class="codex-toggle-group" id="codex-genitalia-toggle"></div>
+                            <div class="codex-gallery-axis">
+                                <label>Progress by:</label>
+                                <div class="codex-toggle-group" id="codex-axis-tabs"></div>
+                            </div>
+                            <div class="codex-locked-stats" id="codex-locked-stats"></div>
+                            <div class="codex-portrait-grid" id="codex-portrait-grid"></div>
+                        </div>
+                        <div id="codex-scene-gallery" class="codex-scene-gallery hidden">
+                            <button class="codex-gallery-back" id="btn-gallery-back-scenes">&larr; Back</button>
+                            <div class="codex-scene-list" id="codex-scene-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="btn-close-characters" class="modal-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Save/Load Modal -->
+    <div id="save-load-modal" class="modal hidden">
+        <div class="modal-content save-load-modal-content">
+            <h2>Save / Load</h2>
+            <div id="save-slot-list" class="save-slot-list"></div>
+            <button id="btn-close-save-load" class="modal-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Confirm Restart Modal -->
+    <div id="restart-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Restart Game?</h2>
+            <p class="modal-text">This will erase all progress and return to character selection. Are you sure?</p>
+            <div class="modal-buttons">
+                <button id="btn-confirm-restart" class="modal-btn btn-danger">Yes, Restart</button>
+                <button id="btn-cancel-restart" class="modal-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save/Load Notification -->
+    <div id="notification" class="notification hidden">
+        <span id="notification-text"></span>
+    </div>
+
+    <!-- Day Overlay -->
+    <div id="day-overlay" class="day-overlay hidden">
+        <span id="day-overlay-text"></span>
+    </div>
+
+    <!-- Intro Screen -->
+    <div id="intro-screen" class="screen">
+        <div class="screen-content">
+            <h1>Magitech Workshop</h1>
+
+            <div class="intro-story">
+                <p>The train pulls into Millbrook station as the morning sun breaks through the clouds. You step onto the platform with a single bag and a letter from a solicitor.</p>
+                <p>Your uncle - a man you barely knew - has left you his workshop. The place is filled with strange devices and half-finished notes about something called "aether." With nothing else going on in your life, this feels like an opportunity for a new start.</p>
+                <p>As you settle in, you'll discover the devices can reshape the human body in remarkable ways - and that the townsfolk of Millbrook have desires of their own they might share with someone they trust.</p>
+            </div>
+
+            <img src="images/player/player_g0_gs0_c1_m1_b2.webp" alt="Player" class="intro-preview" id="intro-preview-img">
+
+            <div class="intro-body-select">
+                <label>Starting Body</label>
+                <div class="body-toggle">
+                    <button class="body-toggle-btn active" data-genitalia="0">Vagina</button>
+                    <button class="body-toggle-btn" data-genitalia="1">Penis</button>
+                </div>
+            </div>
+
+            <div class="intro-guide">
+                <h3>How to Play</h3>
+                <p>Explore the town, get to know its people, and uncover your uncle's work.</p>
+
+                <div class="guide-items">
+                    <div class="guide-item">
+                        <strong>Day Phases</strong>
+                        <span>Each day has three phases: Morning, Afternoon, and Evening. Actions take time, advancing the phase.</span>
+                    </div>
+                    <div class="guide-item">
+                        <strong>Aether</strong>
+                        <span>Magical energy stored in the crystal cube. Devices draw 2 to increase stats. The cube passively absorbs ambient aether each morning based on how many townsfolk trust you. Infused items from around town also replenish it.</span>
+                    </div>
+                    <div class="guide-item">
+                        <strong>Coin</strong>
+                        <span>Money earned by completing requests at the workshop board. Spend it at shops around town.</span>
+                    </div>
+                    <div class="guide-item">
+                        <strong>Desire Tracker</strong>
+                        <span>Check the desire tracker for hints about what each townsfolk secretly wants - or what might be preventing them from opening up to you.</span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="start-game-btn">Begin</button>
+        </div>
+    </div>
+
+    <!-- Image Overlay -->
+    <div id="image-overlay" class="image-overlay hidden">
+        <button id="image-overlay-close" class="image-overlay-close">&times;</button>
+        <img id="image-overlay-img" src="" alt="Full size image">
+    </div>
+
+    <!-- Desire Tracker -->
+    <div id="desire-tracker" class="desire-tracker">
+        <div class="desire-tracker-header" onclick="UI.toggleDesireTracker()">
+            <span class="desire-tracker-title">Desire Tracker</span>
+            <span class="desire-tracker-toggle">▼</span>
+        </div>
+        <div class="desire-tracker-content" id="desire-tracker-content">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <script src="js/desire-dialogues.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/portrait-state.js"></script>
+    <script src="js/transformation-dialogues.js"></script>
+    <script src="js/archetype-scenes.js"></script>
+    <script src="js/metadata.js"></script>
+
+    <script src="js/scenes.js"></script>
+    <script src="js/scenes/mira.js"></script>
+    <script src="js/scenes/vessa.js"></script>
+    <script src="js/scenes/barret.js"></script>
+    <script src="js/scenes/della.js"></script>
+    <script src="js/scenes/fiona.js"></script>
+    <script src="js/scenes/lenna.js"></script>
+    <script src="js/scenes/mrs-thornwick.js"></script>
+    <script src="js/scenes/aldric.js"></script>
+    <script src="js/scenes/corwin.js"></script>
+    <script src="js/scenes/holt.js"></script>
+    <script src="js/scenes/tower-events.js"></script>
+    <script src="js/scenes/tower-skinsuit-scenes.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

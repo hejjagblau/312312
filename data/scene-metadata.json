@@ -1,0 +1,300 @@
+{
+  "_meta": {
+    "description": "Scene image generation metadata. Separated from production code for dev/curation workflow.",
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-29"
+  },
+
+  "locations": {
+    "workshop": {
+      "image": "images/locations/workshop.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy workshop interior, magitech laboratory, cluttered workbenches, mysterious devices, glowing crystals, scattered papers and notes, wooden shelves with strange apparatus, warm lighting, dust motes in sunlight, cozy atmosphere, steampunk elements, magical workshop, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "town_street": {
+      "image": "images/locations/town_street.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy town street, medieval village, cobblestone road, half-timbered buildings, warm afternoon light, quaint shops, flower boxes, peaceful atmosphere, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "square": {
+      "image": "images/locations/square.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy town square, medieval marketplace, cobblestone plaza, fountain, market stalls, half-timbered buildings, blue sky, fantasy architecture, quaint village, peaceful atmosphere, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, crowd, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "tavern": {
+      "image": "images/locations/tavern.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy tavern interior, medieval inn, wooden tables and chairs, bar counter, warm fireplace, lantern lighting, cozy atmosphere, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, crowd, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "herbalist": {
+      "image": "images/locations/herbalist.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy herbalist shop interior, hanging dried herbs, potion bottles, mystical atmosphere, wooden shelves, glowing ingredients, dim lighting, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "bakery": {
+      "image": "images/locations/bakery.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy bakery interior, bread loaves, pastries on counter, brick oven, flour-dusted surfaces, warm lighting, cozy atmosphere, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "library": {
+      "image": "images/locations/library.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy library interior, tall bookshelves, ancient tomes, reading tables, dust motes, magical atmosphere, stained glass windows, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "blacksmith": {
+      "image": "images/locations/blacksmith.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy blacksmith interior, forge, anvil, hanging tools, glowing embers, metal work, warm orange lighting, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "guardpost": {
+      "image": "images/locations/guardpost.png",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> fantasy guard post interior, weapons rack, notice board, wooden desk, town crest on wall, no people, background art, wide shot",
+        "negative": "person, people, character, figure, human, bad anatomy, blurry, low quality, text, watermark",
+        "width": 1216,
+        "height": 832
+      },
+      "variations": [],
+      "curatorNotes": ""
+    }
+  },
+
+  "npcs": {
+    "mira": {
+      "baseTraits": "mira, courier, young woman, adult, early 20s, auburn hair, shoulder-length hair, windswept hair, green eyes, fair skin, light freckles, round face, youthful",
+      "defaultClothing": "leather courier vest, white blouse, practical pants, messenger bag",
+      "defaultBackground": "town square background, cobblestone, market stalls",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, friendly smile", "curatorNotes": "" },
+        "happy": { "terms": "happy expression, bright smile, excited", "curatorNotes": "" },
+        "blushing": { "terms": "blushing, flustered, shy smile", "curatorNotes": "" },
+        "surprised": { "terms": "surprised expression, wide eyes", "curatorNotes": "" },
+        "aroused": { "terms": "aroused, flushed cheeks, parted lips, half-lidded eyes", "curatorNotes": "" }
+      }
+    },
+    "vessa": {
+      "baseTraits": "vessa, herbalist, adult woman, mid 30s, black hair, long straight hair, hooded, violet eyes, pale flawless skin, angular face, high cheekbones",
+      "defaultClothing": "dark green hooded cloak, earth-tone dress, herb pouches",
+      "defaultBackground": "herbalist shop interior background, hanging dried herbs, potion bottles",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, knowing smile", "curatorNotes": "" },
+        "curious": { "terms": "curious expression, raised eyebrow", "curatorNotes": "" },
+        "mysterious": { "terms": "mysterious smile, knowing look", "curatorNotes": "" }
+      }
+    },
+    "barret": {
+      "baseTraits": "barret, tavern owner, adult woman, early 30s, red hair, curly voluminous hair, warm brown eyes, fair skin, rosy cheeks, round face, easy laugh lines",
+      "defaultClothing": "blouse with modest neckline, bodice, long skirt, apron",
+      "defaultBackground": "tavern interior background, bar counter, warm lighting",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, conversational", "curatorNotes": "" },
+        "happy": { "terms": "happy expression, welcoming smile", "curatorNotes": "" },
+        "thoughtful": { "terms": "thoughtful expression, reminiscing", "curatorNotes": "" },
+        "flirty": { "terms": "flirty expression, playful smile, wink", "curatorNotes": "" }
+      }
+    },
+    "della": {
+      "baseTraits": "della, baker, adult woman, early 50s, grey-streaked brown hair, hair tied back in kerchief, warm brown eyes, fair skin, flour-dusted, smile wrinkles, soft round kind motherly face",
+      "defaultClothing": "simple modest dress, flour-dusted apron, rolled sleeves",
+      "defaultBackground": "bakery interior background, bread loaves, warm lighting",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, gentle smile", "curatorNotes": "" },
+        "happy": { "terms": "happy expression, warm smile", "curatorNotes": "" },
+        "thoughtful": { "terms": "thoughtful expression, reminiscing", "curatorNotes": "" }
+      }
+    },
+    "fiona": {
+      "baseTraits": "fiona, street kid, young woman, late teens 18-19, dirty blonde hair, messy short choppy cut, hazel eyes, tanned skin, dirt smudges, thin face, wary, soft features",
+      "defaultClothing": "patched oversized shirt, worn trousers, worn boots",
+      "defaultBackground": "town square background, alleyway",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, guarded look", "curatorNotes": "" },
+        "curious": { "terms": "curious expression, interested", "curatorNotes": "" },
+        "shy": { "terms": "shy expression, looking down", "curatorNotes": "" }
+      }
+    },
+    "lenna": {
+      "baseTraits": "lenna, librarian, adult woman, late 20s, brown hair, long hair usually in braid or bun, grey eyes, pale indoor complexion, soft delicate features, often looking down",
+      "defaultClothing": "high-collar modest dress, reading glasses, ink-stained fingers",
+      "defaultBackground": "library interior background, bookshelves, reading table",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, quiet smile", "curatorNotes": "" },
+        "focused": { "terms": "focused expression, reading", "curatorNotes": "" },
+        "shy": { "terms": "shy expression, blushing, looking away", "curatorNotes": "" }
+      }
+    },
+    "mrs_thornwick": {
+      "baseTraits": "mrs thornwick, town elder, adult woman, mid 40s, blonde hair greying, hair pinned up in formal style, blue eyes, fair well-maintained skin, oval face, dignified, practiced smile",
+      "defaultClothing": "fine dress, mayoral sash, modest jewelry",
+      "defaultBackground": "town square background, official setting",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, dignified", "curatorNotes": "" },
+        "pleased": { "terms": "pleased expression, approving smile", "curatorNotes": "" },
+        "stern": { "terms": "stern expression, serious look", "curatorNotes": "" }
+      }
+    },
+    "aldric": {
+      "baseTraits": "aldric, blacksmith, adult man, late 40s, dark brown hair short receding with some grey, brown eyes, tanned weathered skin, soot marks, square jaw, stern, thick eyebrows",
+      "defaultClothing": "leather apron, sleeveless shirt, work gloves",
+      "defaultBackground": "blacksmith interior background, forge, anvil",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, stern", "curatorNotes": "" },
+        "working": { "terms": "focused expression, working", "curatorNotes": "" }
+      }
+    },
+    "corwin": {
+      "baseTraits": "corwin, merchant, adult man, mid 30s, black hair slicked back well-groomed, dark brown eyes, olive tanned skin, handsome sharp features, charming smirk",
+      "defaultClothing": "fine traveling coat, colorful scarf, rings, polished boots",
+      "defaultBackground": "market stall background, exotic goods",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, charming smile", "curatorNotes": "" },
+        "persuasive": { "terms": "persuasive expression, salesman smile", "curatorNotes": "" }
+      }
+    },
+    "holt": {
+      "baseTraits": "holt, town guard, adult man, late 30s, sandy blonde hair military short cut, steel grey eyes, fair skin with a few scars, strong jaw, stern, disciplined",
+      "defaultClothing": "guard uniform, chainmail, sword at hip, town crest badge",
+      "defaultBackground": "guard post interior background, weapons rack",
+      "expressions": {
+        "neutral": { "terms": "neutral expression, stern", "curatorNotes": "" },
+        "alert": { "terms": "alert expression, watchful", "curatorNotes": "" }
+      }
+    }
+  },
+
+  "scenes": {
+    "bakery_visit_1": {
+      "imageRef": "della_neutral",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> 1girl, della, baker, adult woman, early 50s, grey-streaked brown hair, hair tied back in kerchief, warm brown eyes, fair skin, flour-dusted, smile wrinkles, soft round kind motherly face, neutral expression, gentle smile, chubby plump soft belly, short petite, large breasts, fully clothed, simple modest dress, flour-dusted apron, rolled sleeves, bakery interior background, bread loaves, warm lighting, portrait, upper body, looking at viewer",
+        "negative": "bad anatomy, bad hands, blurry, low quality, deformed, child, text, watermark, nude, naked",
+        "width": 832,
+        "height": 1216
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "bakery_visit_2": {
+      "imageRef": "della_happy",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> 1girl, della, baker, adult woman, early 50s, grey-streaked brown hair, hair tied back in kerchief, warm brown eyes, fair skin, flour-dusted, smile wrinkles, soft round kind motherly face, happy expression, warm smile, chubby plump soft belly, short petite, large breasts, fully clothed, simple modest dress, flour-dusted apron, rolled sleeves, holding tray of golden rolls, bakery interior background, oven, warm lighting, portrait, upper body, looking at viewer",
+        "negative": "bad anatomy, bad hands, blurry, low quality, deformed, child, text, watermark, nude, naked",
+        "width": 832,
+        "height": 1216
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "bakery_visit_3": {
+      "imageRef": "della_neutral",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> 1girl, della, baker, adult woman, early 50s, grey-streaked brown hair, hair tied back in kerchief, warm brown eyes, fair skin, flour-dusted, smile wrinkles, soft round kind motherly face, neutral expression, slightly bored, chubby plump soft belly, short petite, large breasts, fully clothed, simple modest dress, flour-dusted apron, rolled sleeves, wiping counter, bakery interior background, quiet atmosphere, portrait, upper body, looking at viewer",
+        "negative": "bad anatomy, bad hands, blurry, low quality, deformed, child, text, watermark, nude, naked",
+        "width": 832,
+        "height": 1216
+      },
+      "variations": [],
+      "curatorNotes": ""
+    },
+    "npc_barret_greeting": {
+      "imageRef": "barret_happy",
+      "imagePrompt": {
+        "prompt": "<lora:CherryMouseStreetStylePonyLyco:0.75> 1girl, barret, tavern owner, adult woman, early 30s, red hair, curly voluminous hair, warm brown eyes, fair skin, rosy cheeks, round face, easy laugh lines, happy expression, welcoming smile, chubby plump soft belly, average height, large breasts, fully clothed, blouse with modest neckline, bodice, long skirt, apron, tavern interior background, bar counter, warm lighting, portrait, upper body, looking at viewer",
+        "negative": "bad anatomy, bad hands, blurry, low quality, deformed, child, text, watermark, nude, naked",
+        "width": 832,
+        "height": 1216
+      },
+      "variations": [],
+      "curatorNotes": ""
+    }
+  },
+
+  "transformations": {
+    "chest": {
+      "1": { "image": "images/transformations/chest_to1.png", "curatorNotes": "" },
+      "2": { "image": "images/transformations/chest_to2.png", "curatorNotes": "" },
+      "3": { "image": "images/transformations/chest_to3.png", "curatorNotes": "" },
+      "4": { "image": "images/transformations/chest_to4.png", "curatorNotes": "" },
+      "5": { "image": "images/transformations/chest_to5.png", "curatorNotes": "" }
+    },
+    "butt": {
+      "1": { "image": "images/transformations/butt_to1.png", "curatorNotes": "" },
+      "2": { "image": "images/transformations/butt_to2.png", "curatorNotes": "" },
+      "3": { "image": "images/transformations/butt_to3.png", "curatorNotes": "" },
+      "4": { "image": "images/transformations/butt_to4.png", "curatorNotes": "" },
+      "5": { "image": "images/transformations/butt_to5.png", "curatorNotes": "" }
+    },
+    "muscle": {
+      "1": { "image": "images/transformations/muscle_to1.png", "curatorNotes": "" },
+      "2": { "image": "images/transformations/muscle_to2.png", "curatorNotes": "" },
+      "3": { "image": "images/transformations/muscle_to3.png", "curatorNotes": "" },
+      "4": { "image": "images/transformations/muscle_to4.png", "curatorNotes": "" },
+      "5": { "image": "images/transformations/muscle_to5.png", "curatorNotes": "" }
+    },
+    "height": {
+      "1": { "image": "images/transformations/height_to1.png", "curatorNotes": "Disabled - SD height variations not convincing" },
+      "2": { "image": "images/transformations/height_to2.png", "curatorNotes": "Disabled" },
+      "3": { "image": "images/transformations/height_to3.png", "curatorNotes": "Disabled" },
+      "4": { "image": "images/transformations/height_to4.png", "curatorNotes": "Disabled" },
+      "5": { "image": "images/transformations/height_to5.png", "curatorNotes": "Disabled" }
+    }
+  },
+
+  "devices": {
+    "chest_shaper": { "image": "images/devices/chest_shaper.png", "curatorNotes": "" },
+    "posterior_enhancer": { "image": "images/devices/posterior_enhancer.png", "curatorNotes": "" },
+    "mass_modulator": { "image": "images/devices/mass_modulator.png", "curatorNotes": "Disabled" },
+    "muscle_toner": { "image": "images/devices/muscle_toner.png", "curatorNotes": "" },
+    "height_adjuster": { "image": "images/devices/height_adjuster.png", "curatorNotes": "Disabled" },
+    "genital_sizer": { "image": "images/devices/genital_sizer.png", "curatorNotes": "" },
+    "genital_reshaper": { "image": "images/devices/genital_reshaper.png", "curatorNotes": "" }
+  }
+}
